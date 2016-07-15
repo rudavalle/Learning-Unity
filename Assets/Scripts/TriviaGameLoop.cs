@@ -41,7 +41,10 @@ public class TriviaGameLoop : MonoBehaviour {
     //Use this for initialization
     void Start()
 	{
-		
+        for (int i = 0; i < questionNumbersChoosen.Length; i++)
+        {
+            questionNumbersChoosen[i] = -1;
+        }
 
         questions[0] = new Question("What is the capital of Spain?", new string[] { "Topeka", "Amsterdam", "Madrid", "London", "Toledo" }, 2);
         questions[1] = new Question("Who was the second US president?", new string[] { "Thomas Jefferson", "John Adams", "Bill Clinton", "George Washington", "Abraham Lincoln" }, 1);
